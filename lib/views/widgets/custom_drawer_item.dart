@@ -8,9 +8,16 @@ class CustomDrawerItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return  ListTile(
+    return ListTile(
       leading: Icon(drawerItemModel.icon),
-      title: Text(drawerItemModel.title),
+      title: Padding(
+        padding: const EdgeInsets.only(left: 16),
+        child: FittedBox(
+          alignment: Alignment.centerLeft,
+          fit: BoxFit.scaleDown,
+          child: Text(drawerItemModel.title),
+        ),
+      ),
     );
   }
 }
