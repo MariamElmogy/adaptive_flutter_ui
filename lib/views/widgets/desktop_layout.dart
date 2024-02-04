@@ -8,20 +8,23 @@ class DesktopLayout extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Row(
-      children: [
-        Expanded(child: CustomDrawer()),
-        Expanded(
-          flex: 3,
-          child: Padding(
-            padding: EdgeInsets.symmetric(horizontal: 16),
-            child: TabletLayout(),
+    return const Padding(
+      padding: EdgeInsets.symmetric(horizontal: 16.0),
+      child: Row(
+        children: [
+          Expanded(child: CustomDrawer()),
+          Expanded(
+            flex: 3,
+            child: Padding(
+              padding: EdgeInsets.symmetric(horizontal: 16),
+              child: TabletLayout(),
+            ),
           ),
-        ),
-        Expanded(
-          child: CustomDesktopWidget(),
-        ),
-      ],
+          Expanded(
+            child: CustomDesktopWidget(),
+          ),
+        ],
+      ),
     );
   }
 }
